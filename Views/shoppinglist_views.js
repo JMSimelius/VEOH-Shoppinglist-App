@@ -46,7 +46,7 @@ const shoppinglist_view = ((data) => {
     <html>
     <head>
     <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./public/stylesheet/styles.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
     </head>
     <body>
     <h1>Ostoslista appi</h1>
