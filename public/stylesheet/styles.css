@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+body {
+    background-color: rgb(236, 212, 216);
+    font-family: Poiret One;
+    border-style: solid;
+  }
+  .lists {
+      /*background-color: #E4D6A7;*/
+      background-color: rgb(236, 212, 216); 
+      font-family: Poiret One;
+      border-style: solid;   
+  }
+  .container {
+    /*background-color: #E4D6A7;*/
+    background-color: rgb(236, 212, 216); 
+    font-family: Poiret One;
+    border-style: solid;
+}
+.listsview {
+  /*background-color: #E4D6A7;*/
+  background-color: rgb(236, 212, 216); 
+  font-family: Poiret One;
+  border-style: solid;   
+}

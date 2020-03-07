@@ -1,0 +1,29 @@
+{
+  "name": "veoh-nodeexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node harkkatyo.js",
+    "start-dev": "nodemon harkkatyo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMSimelius/VEOH-Shoppinglist-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMSimelius/VEOH-Shoppinglist-App/issues"
+  },
+  "homepage": "https://github.com/JMSimelius/VEOH-Shoppinglist-App#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
