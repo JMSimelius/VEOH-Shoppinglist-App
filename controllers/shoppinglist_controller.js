@@ -49,7 +49,7 @@ const post_shoppinglist = (req, res, next) => {
     new_shoppinglist.save().then(() => {
         console.log(new_shoppinglist);
         console.log('shoppinglist saved');
-        user.shoppinglist.push(new_shoppinglist);
+        user.shoppinglists.push(new_shoppinglist);
         console.log(user.shoppinglist);
         user.save().then(() => {
             return res.redirect('/');
@@ -61,13 +61,13 @@ const delete_shoppinglist = (req, res, next) => {
     const user = req.user;
     const shoppinglist_id_to_delete = req.body.shoppinglist_id;
 
-    //Remove note from user.notes
+    //Remove shoppinglist from user.notes
     const updated_shoppinglists = user.shoppinglists.filter((shoppinglist_id) => {
         return shoppinglist_id != shoppinglist_id_to_delete;
     });
     user.shoppinglists = updated_shoppinglists;
 
-    //Remove note object from database
+    //Remove shoppinglist object from database
     user.save().then(() => {
         shopping_list_model.findByIdAndRemove(shoppinglist_id_to_delete).then(() => {
             res.redirect('/');
@@ -89,7 +89,7 @@ const post_product = (req, res, next) => {
     //console.log(data);
     //const data = req.body;
     //const { shoppinglist_id } = data;
-    const user = req.user;
+    //const user = req.user;
     const shoppinglist_id = req.body.shoppinglist_id;
     const title = req.body.title;
     const imagePath = req.body.imagePath;
@@ -107,7 +107,6 @@ const post_product = (req, res, next) => {
     //var stringified = JSON.stringify(req.body);
 //    var shoppinglist_id = JSON.parse(JSON.stringify(req.body));
     //console.log(shoppinglist_id);
-
     new_product.save().then(() => {
         shopping_list_model.findOne({
             _id: shoppinglist_id
@@ -117,6 +116,7 @@ const post_product = (req, res, next) => {
             res.redirect(`/shoppinglists/${shoppinglist_id}`);
         });
         });
+
         // user.shoppinglist_id['products'].push(new_product);
         // console.log('product saved');
         // user.save().then(() => {

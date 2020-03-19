@@ -58,11 +58,11 @@ const shoppinglist_view = ((data) => {
     `
     console.log(data);
      data.shoppinglist.products.forEach((product) => {
-        html += products
+        html += product.title
          html += `
          <div class="listsview">
          <p>
-         <h2>Ostoslistan nimi: ${shoppinglists.shoppinglist.name}</h2>
+         
          <h3> Name: ${product.title}<br></h3>
          <img src="${product.imagePath}" width="50px" height="50px" />
          quantity: ${product.quantity} </p>
@@ -73,7 +73,9 @@ const shoppinglist_view = ((data) => {
         });
         html += `
         <form action="/add-product" method="POST">
+
         <p>Ostosten lisäys ostoskoriin </p><br>
+        <input type="hidden" name="shoppinglist_id" value="${data.shoppinglist._id}">
         Mitä lisätään listalle?<br>
             <input type="text" name="title"><br>
         Anna linkki kuvaan <br>

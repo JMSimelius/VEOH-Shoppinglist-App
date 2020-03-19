@@ -2,6 +2,7 @@
 body {
     background-color: rgb(236, 212, 216);
     font-family: Poiret One;
+    text-align: center;
   }
   .lists {
       /*background-color: #E4D6A7;*/
@@ -13,5 +14,6 @@ body {
     /*background-color: #E4D6A7;*/
     background-color: rgb(236, 212, 216); 
     font-family: Poiret One;
+    text-align: center;
     
 }

@@ -11,6 +11,7 @@ const login_view = () => {
     <title>Shopping Cart App</title>
 </head>
     <body>
+    
     <div class="container">
         <h1>Shopping Cart app</h1>
         <p>App where you can log in and create your own shopping list.</p>
